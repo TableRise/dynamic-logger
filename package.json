@@ -1,12 +1,22 @@
 {
-  "name": "tablerise-dynamic-logger",
+  "name": "@tablerise/dynamic-logger",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library to log messages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TableRise/dynamic-logger.git"
+  },
+  "author": "@tablerise/adson-gomes-oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TableRise/dynamic-logger.git./issues"
+  },
+  "homepage": "https://github.com/TableRise/dynamic-logger.git.#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
