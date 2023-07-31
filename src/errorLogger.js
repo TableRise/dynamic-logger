@@ -1,5 +1,5 @@
 const moment = require('moment');
-const { cian, red, base, bold } = require('./colors');
+const { cian, red, base, bold, gray } = require('./colors');
 
 function errorLogger(message) {
     const actualTime = moment().format('Do MMMM YYYY, h:mm:ss a');
@@ -8,7 +8,7 @@ function errorLogger(message) {
 
     const lowerMessage = message.toLowerCase();
 
-    const finalMessage = `${cian}[ ${actualTime} ] ${bold}${red}${label} ${base}=> ${prefix} ${lowerMessage}`;
+    const finalMessage = `${cian}[ ${actualTime} ] ${bold}${red}${label} ${base}=> ${gray}${prefix} ${base}${lowerMessage}`;
     console.log(finalMessage);
 }
 
