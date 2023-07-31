@@ -8,7 +8,7 @@ function warnLogger(message) {
 
     const lowerMessage = message.toLowerCase();
 
-    const finalMessage = `${cian}[ ${actualTime} ] ${yellow}${label} ${base}=> ${gray}${prefix} ${base}${lowerMessage}`;
+    const finalMessage = `${cian}[ ${actualTime} ] ${yellow}${label} ${base}=> ${gray}${prefix} ${base}${lowerMessage}\n`;
     console.log(finalMessage);
 }
 
