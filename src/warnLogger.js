@@ -1,5 +1,5 @@
 const moment = require('moment');
-const { cian, yellow, base } = require('./colors');
+const { cian, yellow, base, bold } = require('./colors');
 
 function warnLogger(message) {
     const actualTime = moment().format('Do MMMM YYYY, h:mm:ss a');
