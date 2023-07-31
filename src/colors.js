@@ -4,7 +4,6 @@ const colors = {
     red: '\x1b[31m',
     yellow: '\x1b[33m',
     green: '\x1b[32m',
-    bold: '\x1b[1m',
     gray: '\x1b[90m'
 }
 
