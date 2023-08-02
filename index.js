@@ -7,7 +7,7 @@ function logger(context, message) {
     const env = process.env.NODE_ENV;
 
     if (env === 'prod') {
-        if (context !== 'PROD') return;
+        if (context !== 'error') return;
         errorLogger(message);
         return;
     }
