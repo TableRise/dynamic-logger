@@ -1,10 +1,10 @@
 const moment = require('moment');
 const { cian, green, base, gray } = require('./colors');
 
-function successLogger(message) {
+function infoLogger(message) {
     const actualTime = moment().format('Do MMMM YYYY, h:mm:ss a');
-    const prefix = 'Operation done with success:'
-    const label = 'SUCCESS';
+    const prefix = 'Operation done with info:'
+    const label = 'INFO';
 
     const lowerMessage = message.toLowerCase();
 
@@ -12,4 +12,4 @@ function successLogger(message) {
     console.log(finalMessage);
 }
 
-module.exports = successLogger;
+module.exports = infoLogger;
