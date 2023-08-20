@@ -1,7 +1,8 @@
-const moment = require('moment');
-const { cian, red, base, gray } = require('./colors');
+import * as moment from 'moment'
+import colors from './colors';
 
-function errorLogger(message) {
+const errorLogger = (message: string): void => {
+    const { cian, red, base, gray } = colors;
     const actualTime = moment().format('Do MMMM YYYY, h:mm:ss a');
     const prefix = 'Operation fail:'
     const label = 'ERROR';
@@ -12,4 +13,4 @@ function errorLogger(message) {
     console.log(finalMessage);
 }
 
-module.exports = errorLogger;
+export default errorLogger;
