@@ -1,4 +1,6 @@
-const colors = {
+import { Colors } from './types/colorsTypes'
+
+const colors: Colors = {
     base: '\x1b[0m',
     cian: '\x1b[36m',
     red: '\x1b[31m',
@@ -7,4 +9,4 @@ const colors = {
     gray: '\x1b[90m'
 }
 
-module.exports = colors;
+export default colors;

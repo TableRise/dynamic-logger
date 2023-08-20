@@ -1,9 +1,11 @@
-const infoLogger = require('./src/infoLogger');
-const warnLogger = require('./src/warnLogger');
-const errorLogger = require('./src/errorLogger');
-require('dotenv').config();
+import infoLogger from './src/infoLogger'
+import warnLogger from './src/warnLogger';
+import errorLogger from './src/errorLogger';
+import * as dotenv from 'dotenv'
+import { ErrorTypes } from './src/types/errorTypes';
+dotenv.config()
 
-function logger(context, message) {
+const logger = (context: string, message: string): void => {
     const env = process.env.NODE_ENV;
 
     if (env === 'prod') {
@@ -20,7 +22,7 @@ function logger(context, message) {
         throw new Error('Error context not accepted (valid values: info, warn, error)')
     }
 
-    const errorTypes = {
+    const errorTypes: ErrorTypes = {
         info: infoLogger,
         warn: warnLogger,
         error: errorLogger
@@ -29,4 +31,4 @@ function logger(context, message) {
     errorTypes[context](message);
 }
 
-module.exports = logger;
+export default logger;
