@@ -1,11 +1,11 @@
+import 'dotenv/config'
 import infoLogger from './src/infoLogger'
 import warnLogger from './src/warnLogger';
 import errorLogger from './src/errorLogger';
-import * as dotenv from 'dotenv'
 import { ErrorTypes } from './src/types/errorTypes';
-dotenv.config()
+import { ContextValue } from './src/types/contextTypes';
 
-const logger = (context: string, message: string): void => {
+const logger = (context: ContextValue, message: string): void => {
     const env = process.env.NODE_ENV;
 
     if (env === 'prod') {
