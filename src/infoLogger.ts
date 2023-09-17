@@ -7,9 +7,7 @@ const infoLogger = (message: string): void => {
     const prefix = 'Operation done with info:'
     const label = 'INFO';
 
-    const lowerMessage = message.toLowerCase();
-
-    const finalMessage = `${cian}[ ${actualTime} ] ${green}${label} ${base}=> ${gray}${prefix} ${base}${lowerMessage}\n`;
+    const finalMessage = `${cian}[ ${actualTime} ] ${green}${label} ${base}=> ${gray}${prefix} ${base}${message}\n`;
     console.log(finalMessage);
 }
 

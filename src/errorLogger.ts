@@ -7,9 +7,7 @@ const errorLogger = (message: string): void => {
     const prefix = 'Operation fail:'
     const label = 'ERROR';
 
-    const lowerMessage = message.toLowerCase();
-
-    const finalMessage = `${cian}[ ${actualTime} ] ${red}${label} ${base}=> ${gray}${prefix} ${base}${lowerMessage}\n`;
+    const finalMessage = `${cian}[ ${actualTime} ] ${red}${label} ${base}=> ${gray}${prefix} ${base}${message}\n`;
     console.log(finalMessage);
 }
 
