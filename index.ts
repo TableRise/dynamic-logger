@@ -5,12 +5,19 @@ import errorLogger from './src/errorLogger';
 import { ErrorTypes } from './src/types/errorTypes';
 import { ContextValue } from './src/types/contextTypes';
 
-const logger = (context: ContextValue, message: string): void => {
+const logger = (context: ContextValue, message: string, bypassProd: boolean): void => {
     const env = process.env.NODE_ENV;
 
+    const errorTypes: ErrorTypes = {
+        info: infoLogger,
+        warn: warnLogger,
+        error: errorLogger
+    }
+
     if (env === 'prod') {
+        if (bypassProd) errorTypes[context](message);
         if (context !== 'error') return;
-        errorLogger(message);
+        errorTypes.error(message);
         return;
     }
 
@@ -20,12 +27,6 @@ const logger = (context: ContextValue, message: string): void => {
         && context !== 'error'
     ) {
         throw new Error('Error context not accepted (valid values: info, warn, error)')
-    }
-
-    const errorTypes: ErrorTypes = {
-        info: infoLogger,
-        warn: warnLogger,
-        error: errorLogger
     }
 
     errorTypes[context](message);

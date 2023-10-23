@@ -7,7 +7,7 @@ const infoLogger = (message: string): void => {
     const prefix = 'Operation done with info:'
     const label = 'INFO';
 
-    const finalMessage = `${cian}[ ${actualTime} ] ${green}${label} ${base}=> ${gray}${prefix} ${base}${message}\n`;
+    const finalMessage = `${cian}[ ${actualTime} ] ${green}[${label}] ${base}=> ${gray}${prefix} ${base}${message}\n`;
     console.log(finalMessage);
 }
 

@@ -5,4 +5,5 @@ export type Colors = {
   yellow: string;
   green: string;
   gray: string;
+  purple: string;
 };

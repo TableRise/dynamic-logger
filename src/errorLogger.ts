@@ -7,7 +7,7 @@ const errorLogger = (message: string): void => {
     const prefix = 'Operation fail:'
     const label = 'ERROR';
 
-    const finalMessage = `${cian}[ ${actualTime} ] ${red}${label} ${base}=> ${gray}${prefix} ${base}${message}\n`;
+    const finalMessage = `${cian}[ ${actualTime} ] ${red}[${label}] ${base}=> ${gray}${prefix} ${base}${message}\n`;
     console.log(finalMessage);
 }
 

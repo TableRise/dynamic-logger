@@ -7,7 +7,7 @@ const warnLogger = (message: string): void => {
 	const prefix = "Operation done with a warn:";
 	const label = "WARN";
 
-	const finalMessage = `${cian}[ ${actualTime} ] ${yellow}${label} ${base}=> ${gray}${prefix} ${base}${message}\n`;
+	const finalMessage = `${cian}[ ${actualTime} ] ${yellow}[${label}] ${base}=> ${gray}${prefix} ${base}${message}\n`;
 	console.log(finalMessage);
 }
 
