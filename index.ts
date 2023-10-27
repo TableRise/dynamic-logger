@@ -5,7 +5,7 @@ import errorLogger from './src/errorLogger';
 import { ErrorTypes } from './src/types/errorTypes';
 import { ContextValue } from './src/types/contextTypes';
 
-const logger = (context: ContextValue, message: string, bypassProd: boolean): void => {
+const logger = (context: ContextValue, message: string, bypassProd: boolean = false): void => {
     const env = process.env.NODE_ENV;
 
     const errorTypes: ErrorTypes = {
