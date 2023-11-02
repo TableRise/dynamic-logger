@@ -27,6 +27,7 @@ const logger = (context: ContextValue, message: string, bypassProd: boolean = fa
         context !== 'info'
         && context !== 'warn'
         && context !== 'error'
+        && context !== 'test'
     ) {
         throw new Error('Error context not accepted (valid values: info, warn, error)')
     }
