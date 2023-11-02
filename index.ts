@@ -4,6 +4,7 @@ import warnLogger from './src/warnLogger';
 import errorLogger from './src/errorLogger';
 import { ErrorTypes } from './src/types/errorTypes';
 import { ContextValue } from './src/types/contextTypes';
+import testLogger from './src/testLogger';
 
 const logger = (context: ContextValue, message: string, bypassProd: boolean = false): void => {
     const env = process.env.NODE_ENV;
@@ -11,7 +12,8 @@ const logger = (context: ContextValue, message: string, bypassProd: boolean = fa
     const errorTypes: ErrorTypes = {
         info: infoLogger,
         warn: warnLogger,
-        error: errorLogger
+        error: errorLogger,
+        test: testLogger
     }
 
     if (env === 'prod') {

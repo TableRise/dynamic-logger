@@ -1,7 +1,7 @@
 import * as moment from "moment";
 import colors from "./colors";
 
-const infoLogger = (message: string): void => {
+const testLogger = (message: string): void => {
     const { cian, base, gray, purple } = colors;
     const actualTime = moment().format('Do MMMM YYYY, h:mm:ss a');
     const prefix = 'Operation done in test environment:'
@@ -11,4 +11,4 @@ const infoLogger = (message: string): void => {
     console.log(finalMessage);
 }
 
-export default infoLogger;
+export default testLogger;

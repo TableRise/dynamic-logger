@@ -1,1 +1,1 @@
-export type ContextValue = 'info' | 'warn' | 'error';
+export type ContextValue = 'info' | 'warn' | 'error' | 'test';
