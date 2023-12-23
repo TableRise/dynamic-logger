@@ -16,7 +16,7 @@ const logger = (context: ContextValue, message: string, bypassProd: boolean = fa
         test: testLogger
     }
 
-    if (env === 'prod') {
+    if (env === 'production') {
         if (bypassProd) errorTypes[context](message);
         if (context !== 'error') return;
         errorTypes.error(message);
